@@ -1,0 +1,16 @@
+# Build products
+/build/
+.build/
+DerivedData/
+*.xcarchive
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+
+# Local configuration
+.claude/settings.local.json
+.claude/worktrees/
+
+# macOS
+.DS_Store
