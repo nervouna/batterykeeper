@@ -1,0 +1,1404 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "": {
+      "extractionState": "manual"
+    },
+    "%": {
+      "extractionState": "manual"
+    },
+    "%@ remaining": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "剩余 %@"
+          }
+        }
+      }
+    },
+    "%@ to full": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 后充满"
+          }
+        }
+      }
+    },
+    "%lld W adapter": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld W 适配器"
+          }
+        }
+      }
+    },
+    "%lld days": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 天"
+          }
+        }
+      }
+    },
+    "%lld min": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 分钟"
+          }
+        }
+      }
+    },
+    "24 hours": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "24 小时"
+          }
+        }
+      }
+    },
+    "30 days": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 天"
+          }
+        }
+      }
+    },
+    "7 days": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7 天"
+          }
+        }
+      }
+    },
+    "A cycle charges to 100%, discharges on power to the floor, charges to 100% again, holds, then discharges to the daily limit. A due cycle starts when the Mac is awake and plugged in. Settings apply to the next cycle.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一轮循环：充到 100%，插着电放电到下限，再充到 100%，保持一段时间，最后放电到日常上限。到期的循环会在 Mac 醒着且接通电源时开始。修改的设置从下一轮起生效。"
+          }
+        }
+      }
+    },
+    "A cycle needs the privileged helper to discharge on power.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "插着电放电需要先安装特权辅助进程。"
+          }
+        }
+      }
+    },
+    "Adapter": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "适配器"
+          }
+        }
+      }
+    },
+    "Allow the BatteryKeeper helper in System Settings to discharge on power.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在系统设置中允许 BatteryKeeper 辅助进程，才能插着电放电。"
+          }
+        }
+      }
+    },
+    "Battery": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "电池"
+          }
+        }
+      }
+    },
+    "Battery power (± W)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "电池功率（± W）"
+          }
+        }
+      }
+    },
+    "BatteryKeeper Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BatteryKeeper 设置"
+          }
+        }
+      }
+    },
+    "BatteryKeeper Statistics": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BatteryKeeper 统计"
+          }
+        }
+      }
+    },
+    "BatteryKeeper records a sample every minute while the Mac is awake.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 醒着时，BatteryKeeper 每分钟记录一次数据。"
+          }
+        }
+      }
+    },
+    "BatteryKeeper records the battery's health once a day.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BatteryKeeper 每天记录一次电池健康度。"
+          }
+        }
+      }
+    },
+    "BatteryKeeper started": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BatteryKeeper 已启动"
+          }
+        }
+      }
+    },
+    "Calibration cycle": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "校准循环"
+          }
+        }
+      }
+    },
+    "Calibration cycle cancelled": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "校准循环已取消"
+          }
+        }
+      }
+    },
+    "Calibration cycle finished": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "校准循环已完成"
+          }
+        }
+      }
+    },
+    "Calibration cycle gave up after 72 hours": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "校准循环超过 72 小时，已放弃"
+          }
+        }
+      }
+    },
+    "Calibration cycle started by hand": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手动开始校准循环"
+          }
+        }
+      }
+    },
+    "Charge": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "电量"
+          }
+        }
+      }
+    },
+    "Charge limit": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "充电上限"
+          }
+        }
+      }
+    },
+    "Charge limit set to %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "充电上限设为 %@"
+          }
+        }
+      }
+    },
+    "Charge to Full Now": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即充满"
+          }
+        }
+      }
+    },
+    "Charge to full now": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即充满"
+          }
+        }
+      }
+    },
+    "Charging": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在充电"
+          }
+        }
+      }
+    },
+    "Charging started at %@%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 %@%% 开始充电"
+          }
+        }
+      }
+    },
+    "Charging stopped at %@%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 %@%% 停止充电"
+          }
+        }
+      }
+    },
+    "Charging to 100%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "充电至 100%"
+          }
+        }
+      }
+    },
+    "Colored status": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "彩色状态"
+          }
+        }
+      }
+    },
+    "Could not change the login item: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法更改登录项：%@"
+          }
+        }
+      }
+    },
+    "Could not install the helper: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法安装辅助进程：%@"
+          }
+        }
+      }
+    },
+    "Could not lift the charge limit: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法解除充电上限：%@"
+          }
+        }
+      }
+    },
+    "Could not remove the helper: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法移除辅助进程：%@"
+          }
+        }
+      }
+    },
+    "Could not restore the charge limit: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法恢复充电上限：%@"
+          }
+        }
+      }
+    },
+    "Could not set the charge limit: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法设置充电上限：%@"
+          }
+        }
+      }
+    },
+    "Could not start charging to full: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法开始充满：%@"
+          }
+        }
+      }
+    },
+    "Cycle count": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "循环次数"
+          }
+        }
+      }
+    },
+    "Cycle phase: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "循环阶段：%@"
+          }
+        }
+      }
+    },
+    "Cycles": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "循环次数"
+          }
+        }
+      }
+    },
+    "Day": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "日期"
+          }
+        }
+      }
+    },
+    "Design %lld mAh": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设计容量 %lld mAh"
+          }
+        }
+      }
+    },
+    "Discharge to": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "放电至"
+          }
+        }
+      }
+    },
+    "Discharging on power": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "接通电源放电中"
+          }
+        }
+      }
+    },
+    "Discharging to %lld%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "放电至 %lld%%"
+          }
+        }
+      }
+    },
+    "Event": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "事件"
+          }
+        }
+      }
+    },
+    "Events": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "事件"
+          }
+        }
+      }
+    },
+    "Every": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "间隔"
+          }
+        }
+      }
+    },
+    "Full charge capacity": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "满充容量"
+          }
+        }
+      }
+    },
+    "Fully charged": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已充满"
+          }
+        }
+      }
+    },
+    "General": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通用"
+          }
+        }
+      }
+    },
+    "Health": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "健康度"
+          }
+        }
+      }
+    },
+    "Health %lld%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "健康度 %lld%%"
+          }
+        }
+      }
+    },
+    "Held at the limit": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已停在上限"
+          }
+        }
+      }
+    },
+    "Helper": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "辅助进程"
+          }
+        }
+      }
+    },
+    "Helper problem: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "辅助进程出错：%@"
+          }
+        }
+      }
+    },
+    "Helper: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "辅助进程：%@"
+          }
+        }
+      }
+    },
+    "History": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "历史"
+          }
+        }
+      }
+    },
+    "Hold at 100% for": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "满电保持"
+          }
+        }
+      }
+    },
+    "Holding at 100%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保持满电"
+          }
+        }
+      }
+    },
+    "Holding until %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保持到 %@"
+          }
+        }
+      }
+    },
+    "Install Helper…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装辅助进程…"
+          }
+        }
+      }
+    },
+    "Installed": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已安装"
+          }
+        }
+      }
+    },
+    "Installed, not responding": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已安装，未响应"
+          }
+        }
+      }
+    },
+    "Install…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装…"
+          }
+        }
+      }
+    },
+    "Last 15 minutes": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最近 15 分钟"
+          }
+        }
+      }
+    },
+    "Launch at login": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开机时启动"
+          }
+        }
+      }
+    },
+    "Menu bar": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "菜单栏"
+          }
+        }
+      }
+    },
+    "Next cycle": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下一轮"
+          }
+        }
+      }
+    },
+    "Next: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下一轮：%@"
+          }
+        }
+      }
+    },
+    "No battery information": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无电池信息"
+          }
+        }
+      }
+    },
+    "No events yet": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂无事件"
+          }
+        }
+      }
+    },
+    "No samples yet": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂无数据"
+          }
+        }
+      }
+    },
+    "Nominal / design capacity": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标称容量 / 设计容量"
+          }
+        }
+      }
+    },
+    "Nominal capacity": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标称容量"
+          }
+        }
+      }
+    },
+    "Not enough history yet": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "历史数据还不够"
+          }
+        }
+      }
+    },
+    "Not installed": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未安装"
+          }
+        }
+      }
+    },
+    "Off": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关"
+          }
+        }
+      }
+    },
+    "On battery": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用电池"
+          }
+        }
+      }
+    },
+    "Open Login Items…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开登录项设置…"
+          }
+        }
+      }
+    },
+    "Percentage": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "百分比"
+          }
+        }
+      }
+    },
+    "Phase %lld of %lld: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第 %1$lld/%2$lld 阶段：%3$@"
+          }
+        }
+      }
+    },
+    "Plugged in at %@%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 %@%% 接通电源"
+          }
+        }
+      }
+    },
+    "Power": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "功率"
+          }
+        }
+      }
+    },
+    "Quit": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出"
+          }
+        }
+      }
+    },
+    "Recharging to 100%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再次充电至 100%"
+          }
+        }
+      }
+    },
+    "Remove": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除"
+          }
+        }
+      }
+    },
+    "Restored after the cycle": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "循环结束后恢复"
+          }
+        }
+      }
+    },
+    "Ring": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "圆环"
+          }
+        }
+      }
+    },
+    "Run on a schedule": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "定时执行"
+          }
+        }
+      }
+    },
+    "Scheduled calibration cycle started": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "定时校准循环已开始"
+          }
+        }
+      }
+    },
+    "Scheduled cycles are off.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "定时循环已关闭。"
+          }
+        }
+      }
+    },
+    "Series": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "数据"
+          }
+        }
+      }
+    },
+    "Settings…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置…"
+          }
+        }
+      }
+    },
+    "Span": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时间范围"
+          }
+        }
+      }
+    },
+    "Start Cycle Now": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即开始循环"
+          }
+        }
+      }
+    },
+    "Start from": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始时间"
+          }
+        }
+      }
+    },
+    "Started %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始于 %@"
+          }
+        }
+      }
+    },
+    "Statistics are unavailable: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "统计数据不可用：%@"
+          }
+        }
+      }
+    },
+    "Statistics…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "统计…"
+          }
+        }
+      }
+    },
+    "Stop Cycle": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止循环"
+          }
+        }
+      }
+    },
+    "Style": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "样式"
+          }
+        }
+      }
+    },
+    "System": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "整机"
+          }
+        }
+      }
+    },
+    "System power (W)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "整机功耗（W）"
+          }
+        }
+      }
+    },
+    "Temperature": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "温度"
+          }
+        }
+      }
+    },
+    "Text only": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "纯文字"
+          }
+        }
+      }
+    },
+    "The Mac stays awake while discharging. Closing the lid pauses the cycle.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "放电期间 Mac 会保持唤醒。合盖会暂停循环。"
+          }
+        }
+      }
+    },
+    "The helper must be installed and allowed before a cycle can discharge.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "必须先安装并允许辅助进程，循环才能放电。"
+          }
+        }
+      }
+    },
+    "The helper runs as root and only switches the power adapter off and on for calibration cycles. It restores the adapter on its own when BatteryKeeper quits, the Mac sleeps or the charge falls to 10%.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "辅助进程以 root 身份运行，只在校准循环中切断和恢复电源适配器。BatteryKeeper 退出、Mac 睡眠或电量降到 10% 时，它会自动恢复适配器供电。"
+          }
+        }
+      }
+    },
+    "The installed helper is outdated. Reinstall it from Settings.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已安装的辅助进程版本过旧，请在设置中重新安装。"
+          }
+        }
+      }
+    },
+    "This Mac does not offer the system charge limit (macOS 26.4 or later on Apple silicon).": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这台 Mac 不支持系统充电上限（需要 Apple 芯片和 macOS 26.4 或更高版本）。"
+          }
+        }
+      }
+    },
+    "Time": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时间"
+          }
+        }
+      }
+    },
+    "Time remaining": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "剩余时间"
+          }
+        }
+      }
+    },
+    "Unplugged at %@%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 %@%% 断开电源"
+          }
+        }
+      }
+    },
+    "W": {
+      "extractionState": "manual"
+    },
+    "Waiting for approval in System Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "等待在系统设置中批准"
+          }
+        }
+      }
+    },
+    "Watts": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "瓦"
+          }
+        }
+      }
+    },
+    "Zero": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "零"
+          }
+        }
+      }
+    },
+    "charge to 100%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "充电至 100%"
+          }
+        }
+      }
+    },
+    "discharge to the floor": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "放电至下限"
+          }
+        }
+      }
+    },
+    "discharge to the limit": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "放电至上限"
+          }
+        }
+      }
+    },
+    "hold at 100%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保持满电"
+          }
+        }
+      }
+    },
+    "recharge to 100%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再次充电至 100%"
+          }
+        }
+      }
+    },
+    "°C": {
+      "extractionState": "manual"
+    }
+  },
+  "version": "1.0"
+}
