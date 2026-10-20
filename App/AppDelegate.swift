@@ -19,7 +19,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     #if DEBUG
     /// Debug builds open their windows on a distributed notification, so that scripts can capture them:
-    /// name `io.damao.batterykeeper.debug.show`, object `popover`, `settings`, `statistics`, `close`, `installHelper`, `startCycle` or `cancelCycle`.
+    /// name `io.damao.batterykeeper.debug.show`, object `popover`, `settings`, `statistics`, `close`, `installHelper`, `startCycle`, `cancelCycle`, `statistics:<tab>` or `limit:<percent>`.
     private func startDebugCommands() {
         DistributedNotificationCenter.default().addObserver(
             forName: Notification.Name("io.damao.batterykeeper.debug.show"), object: nil, queue: .main
@@ -34,6 +34,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 case "installHelper": self?.model.installHelper()
                 case "startCycle": self?.model.startCycle()
                 case "cancelCycle": self?.model.cancelCycle()
+                case let what? where what.hasPrefix("statistics:"):
+                    UserDefaults.standard.set(String(what.dropFirst("statistics:".count)), forKey: "statisticsTab")
+                    self?.windows?.showStatistics()
+                case let what? where what.hasPrefix("limit:"):
+                    if let limit = Int(what.dropFirst("limit:".count)) { self?.model.setLimit(limit) }
                 default: break
                 }
             }

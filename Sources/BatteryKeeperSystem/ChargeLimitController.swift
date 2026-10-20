@@ -43,14 +43,21 @@ public final class ChargeLimitController {
     }
 
     /// Sets the limit, 100 switching it off.
+    ///
+    /// Setting a limit also switches it on. `enableMCL` must not follow: it resets the limit to the
+    /// system's default (80). It is only used when the limit is still off after setting it, and the
+    /// limit is set again after it.
     public func setLimit(_ limit: Int) throws(ChargeLimitError) {
         guard let client else { throw ChargeLimitError(description: "PowerUI is not available") }
         do {
             if limit >= 100 {
                 try client.disable()
-            } else {
-                try client.setLimit(limit)
+                return
+            }
+            try client.setLimit(limit)
+            if (try client.enabledState().intValue) == 0 {
                 try client.enable()
+                try client.setLimit(limit)
             }
         } catch {
             throw ChargeLimitError(description: error.localizedDescription)

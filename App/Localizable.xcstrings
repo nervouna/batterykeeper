@@ -502,7 +502,7 @@
         }
       }
     },
-    "Design %lld mAh": {
+    "Design %@ mAh": {
       "extractionState": "manual",
       "localizations": {
         "zh-Hans": {

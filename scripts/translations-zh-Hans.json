@@ -44,7 +44,7 @@
   "Cycle phase: %@": "循环阶段：%@",
   "Cycles": "循环次数",
   "Day": "日期",
-  "Design %lld mAh": "设计容量 %lld mAh",
+  "Design %@ mAh": "设计容量 %lld mAh",
   "Discharge to": "放电至",
   "Discharging on power": "接通电源放电中",
   "Discharging to %lld%%": "放电至 %lld%%",

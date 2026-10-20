@@ -22,14 +22,15 @@ charge limit that macOS itself enforces. See [research.md](research.md) for why 
 5. Menu bar only (no Dock icon), launch at login, Developer ID signed and notarized.
 
 Non-goals for v0.1: temperature protection, discharging above the limit in daily use, limits below 80 %,
-MagSafe LED control, Intel Macs, macOS before 27, keeping a discharge going while the Mac sleeps, localization
-(the interface is English).
+MagSafe LED control, Intel Macs, macOS before 27, keeping a discharge going while the Mac sleeps.
+
+The interface is in Simplified Chinese (English source strings, a generated String Catalog).
 
 ## Mechanisms
 
 | Need | Mechanism | Privilege |
 | --- | --- | --- |
-| Read/set daily limit, charge to full now | private `PowerUI.framework`, `PowerUISmartChargeClient` (`getMCLLimitWithError:`, `setMCLLimit:error:`, `enableMCL:`, `disableMCL:`, `temporarilyDisableMCL:`, `availableChargeLimitsWithError:`), loaded at runtime with `dlopen` | none (verified for reads from an unsigned binary) |
+| Read/set daily limit, charge to full now | private `PowerUI.framework`, `PowerUISmartChargeClient` (`getMCLLimitWithError:`, `setMCLLimit:error:`, `disableMCL:`, `temporarilyDisableMCL:`, `availableChargeLimitsWithError:`), loaded at runtime with `dlopen`. `setMCLLimit:` also switches the limit on; `enableMCL:` resets it to 80 and is only used when the limit stays off | none |
 | Discharge while plugged in | SMC key `CHIE`: `0x08` cuts the adapter, `0x00` restores it | root: privileged helper |
 | Battery state, health, power flow | IORegistry `AppleSmartBattery` (`CurrentCapacity`, `BatteryData`, `PowerTelemetryData`, `AdapterDetails`, `CycleCount`, `Voltage`, `Amperage`) | none |
 | Battery temperature | SMC `TB0T` (float, °C), read-only | none |

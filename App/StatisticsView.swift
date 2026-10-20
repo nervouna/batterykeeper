@@ -5,13 +5,15 @@ import SwiftUI
 /// The Statistics window: health, history, live power and the event log.
 struct StatisticsView: View {
     let model: AppModel
+    /// The tab shown last, so that the window reopens on it.
+    @AppStorage("statisticsTab") private var selection = "health"
 
     var body: some View {
-        TabView {
-            Tab("Health", systemImage: "heart") { HealthTab(model: model) }
-            Tab("History", systemImage: "chart.xyaxis.line") { HistoryTab(model: model) }
-            Tab("Power", systemImage: "bolt") { PowerTab(model: model) }
-            Tab("Events", systemImage: "list.bullet") { EventsTab(model: model) }
+        TabView(selection: $selection) {
+            Tab("Health", systemImage: "heart", value: "health") { HealthTab(model: model) }
+            Tab("History", systemImage: "chart.xyaxis.line", value: "history") { HistoryTab(model: model) }
+            Tab("Power", systemImage: "bolt", value: "power") { PowerTab(model: model) }
+            Tab("Events", systemImage: "list.bullet", value: "events") { EventsTab(model: model) }
         }
         .padding()
         .frame(minWidth: 640, minHeight: 440)
@@ -44,7 +46,7 @@ private struct HealthTab: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             if let snapshot = model.snapshot {
-                HStack {
+                HStack(alignment: .top) {
                     StatTile(
                         title: String(localized: "Health"),
                         value: snapshot.health.map { "\(Int(($0 * 100).rounded()))%" } ?? "--",
@@ -52,7 +54,7 @@ private struct HealthTab: View {
                     StatTile(title: String(localized: "Cycle count"), value: "\(snapshot.cycleCount)")
                     StatTile(
                         title: String(localized: "Full charge capacity"), value: "\(snapshot.fullChargeCapacity) mAh",
-                        detail: String(localized: "Design \(snapshot.designCapacity) mAh"))
+                        detail: String(localized: "Design \(String(snapshot.designCapacity)) mAh"))
                     StatTile(title: String(localized: "Nominal capacity"), value: "\(snapshot.nominalChargeCapacity) mAh")
                 }
             }
@@ -60,6 +62,7 @@ private struct HealthTab: View {
                 ContentUnavailableView(
                     "Not enough history yet", systemImage: "calendar",
                     description: Text("BatteryKeeper records the battery's health once a day."))
+                .frame(maxWidth: .infinity)
             } else {
                 Text("Health").font(.headline)
                 Chart(rows, id: \.day) { row in
@@ -140,6 +143,7 @@ private struct HistoryTab: View {
                 ContentUnavailableView(
                     "No samples yet", systemImage: "chart.xyaxis.line",
                     description: Text("BatteryKeeper records a sample every minute while the Mac is awake."))
+                .frame(maxWidth: .infinity)
             } else {
                 Text("Charge").font(.headline)
                 Chart(charge, id: \.date) { point in

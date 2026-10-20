@@ -69,6 +69,7 @@ final class AppModel {
         static let settings = "settings"
         static let cycleState = "cycleState"
         static let lastCycleEndedAt = "lastCycleEndedAt"
+        static let loginItemSetUp = "loginItemSetUp"
     }
 
     init() {
@@ -109,6 +110,7 @@ final class AppModel {
 
     func start() {
         record(BatteryEvent(date: Date(), kind: .appLaunched))
+        setUpLoginItemOnce()
         try? store?.pruneSamples(before: Date().addingTimeInterval(-Self.sampleRetention))
         helperStatus = helper.status
         readLimit()
@@ -442,6 +444,13 @@ final class AppModel {
     }
 
     // MARK: - Login item
+
+    /// The first launch from /Applications switches launch at login on; after that it is the user's choice.
+    private func setUpLoginItemOnce() {
+        guard !defaults.bool(forKey: Keys.loginItemSetUp), Bundle.main.bundlePath.hasPrefix("/Applications/") else { return }
+        defaults.set(true, forKey: Keys.loginItemSetUp)
+        setLaunchAtLogin(true)
+    }
 
     func setLaunchAtLogin(_ enabled: Bool) {
         do {

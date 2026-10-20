@@ -24,6 +24,10 @@ The limit is a `ChargeCtrlPolicy` held by `powerd` (persisted in
 `pmset -g battlimit` lists the active policies. On the test machine it shows a `manualChargeLimit` policy
 with `chargeSocLimitSoc = 79`, `chargeSocLimitDrain = 1`, owned by `PowerUIAgent`.
 
+Through `PowerUISmartChargeClient`, `setMCLLimit:` sets the limit and switches it on; `enableMCL:` resets it to the
+default 80 %; `disableMCL:` removes the policy. None of these needs an entitlement (verified from a Developer ID app
+and an unsigned binary).
+
 No app runs to enforce it: it holds across sleep, app quits and crashes, which is the fail-safe property
 the v0.1 brief asks for, for free.
 
