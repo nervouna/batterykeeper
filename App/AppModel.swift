@@ -121,6 +121,18 @@ final class AppModel {
         let observer = PowerSourceObserver { [weak self] in self?.refresh() }
         observer.start()
         powerObserver = observer
+        // The helper restores the adapter before the Mac sleeps; after waking, cut it again right away
+        // instead of at the next lease renewal.
+        NSWorkspace.shared.notificationCenter.addObserver(
+            forName: NSWorkspace.didWakeNotification, object: nil, queue: .main
+        ) { [weak self] _ in
+            MainActor.assumeIsolated {
+                guard let self else { return }
+                self.adapterCut = false
+                self.lastLeaseRequestAt = nil
+                self.refresh()
+            }
+        }
         timer = Timer.scheduledTimer(withTimeInterval: Self.refreshInterval, repeats: true) { [weak self] _ in
             MainActor.assumeIsolated { self?.refresh() }
         }
@@ -278,16 +290,18 @@ final class AppModel {
     /// `-testCycleFull 80 -testCycleFloor 77 -testCycleHoldMinutes 1 -testCyclePhase dischargeToFloor`.
     private static func applyingTestOverrides(to state: CycleState) -> CycleState {
         var state = state
-        let defaults = UserDefaults.standard
-        if let full = defaults.object(forKey: "testCycleFull") as? Int, (1...100).contains(full) {
+        // Launch arguments arrive as strings, `defaults write -int` as numbers; `string(forKey:)` reads both.
+        func int(_ key: String) -> Int? { UserDefaults.standard.string(forKey: key).flatMap { Int($0) } }
+        if let full = int("testCycleFull"), (1...100).contains(full) {
             state.fullPercent = full
         }
-        if let floor = defaults.object(forKey: "testCycleFloor") as? Int, (AdapterLease.hardFloorPercent + 1...99).contains(floor) {
+        if let floor = int("testCycleFloor"), (AdapterLease.hardFloorPercent + 1...99).contains(floor) {
             state.floorPercent = floor
         }
-        if let hold = defaults.object(forKey: "testCycleHoldMinutes") as? Int, hold >= 0 {
+        if let hold = int("testCycleHoldMinutes"), hold >= 0 {
             state.holdMinutes = hold
         }
+        let defaults = UserDefaults.standard
         if let phase = defaults.string(forKey: "testCyclePhase").flatMap(CyclePhase.init(rawValue:)) {
             state.phase = phase
         }
