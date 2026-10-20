@@ -22,6 +22,10 @@ public final class HelperClient {
     private let service = SMAppService.daemon(plistName: HelperConstants.plistName)
     private var connection: NSXPCConnection?
 
+    /// Called when the connection to the helper breaks (the helper exited or was restarted). The helper
+    /// restores the adapter when that happens, so a client that had it cut must ask again.
+    public var onConnectionLost: (() -> Void)?
+
     public init() {}
 
     public var status: HelperStatus {
@@ -118,13 +122,20 @@ public final class HelperClient {
         connection.remoteObjectInterface = NSXPCInterface(with: (any BatteryKeeperHelperProtocol).self)
         connection.setCodeSigningRequirement(CodeSigning.requirement(identifier: HelperConstants.label, team: team))
         connection.invalidationHandler = { [weak self] in
-            Task { @MainActor in self?.connection = nil }
+            Task { @MainActor in self?.connectionLost(connection) }
         }
         connection.interruptionHandler = { [weak self] in
-            Task { @MainActor in self?.connection = nil }
+            Task { @MainActor in self?.connectionLost(connection) }
         }
         connection.resume()
         self.connection = connection
         return connection
+    }
+
+    private func connectionLost(_ lost: NSXPCConnection) {
+        guard connection === lost else { return }
+        connection = nil
+        lost.invalidate()
+        onConnectionLost?()
     }
 }

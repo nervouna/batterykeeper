@@ -63,6 +63,9 @@ final class AppModel {
     @ObservationIgnored private var lastHealthDay: String?
     @ObservationIgnored private var lastLeaseRequestAt: Date?
     @ObservationIgnored private var adapterRequestInFlight = false
+    /// The adapter is cut or about to be: set before the request goes out, because the system reports the
+    /// adapter as disconnected the moment the helper cuts it, before the reply arrives.
+    @ObservationIgnored private var adapterCutIntended = false
     @ObservationIgnored private var lastLoggedProblem: String?
 
     private enum Keys {
@@ -118,6 +121,12 @@ final class AppModel {
         if let state = cycle, Date().timeIntervalSince(state.startedAt) > CalibrationCycle.maximumDuration {
             endCycle(.cycleExpired)
         }
+        helper.onConnectionLost = { [weak self] in
+            guard let self, self.adapterCut else { return }
+            // The helper restored the adapter when the connection broke; the next refresh cuts it again.
+            self.adapterCut = false
+            self.lastLeaseRequestAt = nil
+        }
         let observer = PowerSourceObserver { [weak self] in self?.refresh() }
         observer.start()
         powerObserver = observer
@@ -129,6 +138,7 @@ final class AppModel {
             MainActor.assumeIsolated {
                 guard let self else { return }
                 self.adapterCut = false
+                self.adapterCutIntended = false
                 self.lastLeaseRequestAt = nil
                 self.refresh()
             }
@@ -151,10 +161,14 @@ final class AppModel {
 
     func refresh() {
         let now = Date()
-        guard let new = reader.read(now: now) else {
+        guard var new = reader.read(now: now) else {
             snapshot = nil
             onChange?()
             return
+        }
+        // While the helper has cut it, the adapter reads as disconnected; it is still plugged in.
+        if adapterCut || adapterCutIntended {
+            new.isPluggedIn = true
         }
         let events = EventDetector.events(from: snapshot, to: new)
         events.forEach(record)
@@ -379,6 +393,7 @@ final class AppModel {
         }
         guard !adapterRequestInFlight || force else { return }
         adapterRequestInFlight = true
+        adapterCutIntended = !enabled
         Task {
             defer { adapterRequestInFlight = false }
             do {
@@ -391,6 +406,7 @@ final class AppModel {
                 helperReachable = false
                 // A failed restore still leaves the helper to restore the adapter when the lease runs out.
                 if enabled { adapterCut = false }
+                adapterCutIntended = adapterCut
                 reportHelperProblem(String(describing: error))
             }
             onChange?()

@@ -52,6 +52,12 @@ derived_data="$BUILD_DIR/DerivedData"
 log_file="$BUILD_DIR/xcodebuild-$CONFIGURATION.log"
 mkdir -p "$BUILD_DIR"
 
+# A notarizable build starts from empty products: an incremental build keeps the helper copy that an
+# earlier, debuggable build embedded (and code-sign-on-copy preserves its get-task-allow entitlement).
+if [[ "$CONFIGURATION" == "Release" && "${BATTERYKEEPER_NOTARIZABLE:-}" == "1" ]]; then
+    rm -rf "${derived_data:?}/Build/Products/$CONFIGURATION"
+fi
+
 log "Building $APP_NAME ($CONFIGURATION, full log: ${log_file#"$BATTERYKEEPER_ROOT"/})"
 if ! xcodebuild \
     -project "$BATTERYKEEPER_ROOT/$APP_NAME.xcodeproj" \

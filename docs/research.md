@@ -61,6 +61,16 @@ Consequences for a third-party tool on this machine:
    awake, cutting wall power during clamshell sleep can put the Mac to sleep, and if the controller dies with
    the adapter cut the Mac drains until something re-enables it. It needs a root helper.
 
+## Verified on the test machine (2026-10-21)
+
+- Writing `CHIE = 0x08` as root (the BatteryKeeper helper) cuts the adapter: the Mac runs from the battery while
+  plugged in. The registry then reports `ExternalConnected = No` and `ExternalChargeCapable = No`, while
+  `AdapterDetails` still lists the adapter (90 W). Writing `0x00` restores it immediately.
+- `setMCLLimit:` changes the `powerd` policy at once (`pmset -g battlimit`), and the policy survives quitting
+  AlDente and BatteryKeeper.
+- Killing the app makes the helper restore the adapter within a second (the XPC connection ends); killing the
+  helper makes launchd restart it, and the restarted helper restores the adapter before the app cuts it again.
+
 ## Existing open-source tools
 
 | Project | License | Mechanism on macOS 27 |
