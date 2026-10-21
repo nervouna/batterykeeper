@@ -75,6 +75,10 @@ Macs, macOS before 27, Mac App Store distribution.
 - Signing settings are never committed. Scripts source
   `${XDG_CONFIG_HOME:-$HOME/.config}/batterykeeper/signing.env` (`BATTERYKEEPER_CODESIGN_IDENTITY`,
   `BATTERYKEEPER_TEAM_ID`, `BATTERYKEEPER_NOTARY_*`); `BATTERYKEEPER_SIGNING_ENV` overrides the path.
+- App icon: `design/icon.png` is the source artwork (1024×1024 PNG, interior fully opaque), drawn by
+  `swift design/render-icon.swift`. To replace it, redraw or overwrite that file, run `scripts/make-icon.sh
+  --normalize` (makes the interior opaque, regenerates `App/Assets.xcassets/AppIcon.appiconset`), then
+  `scripts/check-icon-render.sh` after a Release build to check the icon the system draws. See `design/README.md`.
 - The helper is registered from the app (Install Helper) and approved once by the user in System Settings → General
   → Login Items. Never approve, reset or edit background items or TCC on the user's behalf.
 - A running helper keeps its old binary after an install until launchd restarts it; bump

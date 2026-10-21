@@ -35,6 +35,7 @@ swift test                  # unit tests
 scripts/build.sh debug      # build/BatteryKeeper.app
 scripts/install.sh          # signed release build into /Applications
 scripts/release.sh          # notarized zip in build/release
+scripts/make-icon.sh        # app icon set from design/icon.png
 ```
 
 Signing settings come from `~/.config/batterykeeper/signing.env` and are never committed. See [CLAUDE.md](CLAUDE.md)
