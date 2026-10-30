@@ -11,7 +11,7 @@ A macOS menu bar app for Apple silicon MacBooks. It sets the system's own charge
 
 ## Status
 
-BatteryKeeper is a personal project, built to replace the parts of AlDente Pro its author used, and tested on the author's M1 Pro MacBook. It is at version 0.1. Running it takes an Apple silicon MacBook with macOS 27 or later. Calibration cycles also need the privileged helper, which only runs from a build signed with an Apple developer team identity; the charge limit, statistics and menu bar icon work without it. The interface is in Simplified Chinese and English. There are no releases yet: build it from source. A source-only v0.1.0 release will follow.
+BatteryKeeper is a personal project, built to replace the parts of AlDente Pro its author used, and tested on the author's M1 Pro MacBook. It is at version 0.1. Running it takes an Apple silicon MacBook with macOS 27 or later. Calibration cycles also need the privileged helper, which only runs from a build signed with an Apple developer team identity; the charge limit, statistics and menu bar icon work without it. The interface is in Simplified Chinese and English. Releases are source only, with no prebuilt app: build it from source.
 
 ## How it is built
 
