@@ -8,7 +8,6 @@
 
 A macOS menu bar app for Apple silicon MacBooks. It sets the system's own charge limit, runs a scheduled calibration cycle, records battery statistics and draws a configurable menu bar icon.
 
-<!-- screenshots -->
 
 ## Status
 
