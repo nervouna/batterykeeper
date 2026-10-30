@@ -1,0 +1,58 @@
+name: Bug report
+description: Something in BatteryKeeper does not work as described
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What you did and what went wrong. Error messages from the app help.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: The steps that show it, with the settings you use (charge limit, cycle settings).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The release or commit you run (`git rev-parse --short HEAD`).
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: Mac model and macOS version
+      description: For example "MacBook Pro M1 Pro, macOS 27.0.1".
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options:
+        - Charge limit
+        - Calibration cycle
+        - Privileged helper
+        - Statistics
+        - Menu bar icon
+        - Settings
+        - Build scripts
+        - Docs
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix
+      description: Optional. If you know where the cause is, say so.
